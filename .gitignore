@@ -1,0 +1,22 @@
+# Python
+__pyache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual ENVS
+venv/
+.env/
+
+# Python Tests
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+.Logs
+
+# IDEs
+.vscode/
+.idea
