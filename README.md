@@ -33,11 +33,12 @@ mitre-attack-scraper/
 │   ├── groups_info/       # Directory to store data.json
 │   └── groups/            # Directory to store individual group data
 ├── docs/                  # Documentation files
-│   ├── installation.md    # Installation guide
-│   ├── user_guide.md      # User guide
-│   ├── api.md             # API documentation
-│   ├── developer_guide.md # Developer guide
-│   └── release_notes.md   # Release notes
+|   ├── CODE_OF_CONDUCT.md       # Code of Conduct
+|   ├── CONTRIBUTING.md          # Contributions
+│   ├── DEVELOPER_GUIDE.md       # Installation guide
+│   ├── INSTALLATION_GUIDE.md    # Installation guide
+│   ├── RELEASE_NOTES.md         # Release notes 
+│   ├── USER_GUIDE.md            # User guide
 └── notebooks/             # Jupyter notebooks for exploration
 ```
 
@@ -128,11 +129,11 @@ The data is stored in JSON format, with each group having the following structur
 
 ## Contributing
 
-Contributions are welcome! Please read our [Developer Guide](docs/DDEVELOPER_GUIDE.md) for details on our code of conduct and the process for submitting pull requests.
+Contributions are welcome! Please read our [Developer Guide](docs\DEVELOPER_GUIDE.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENCE.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
