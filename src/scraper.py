@@ -4,10 +4,11 @@ import json
 import os
 import argparse
 
+
 def fetch_groups_data(url):
-
-    """Fetch the HTML content of given URL."""
-
+    
+    """Fetch the HTML content of the given URL."""
+    
     try:
         response = requests.get(url)
         response.raise_for_status()
@@ -16,10 +17,11 @@ def fetch_groups_data(url):
         print(f"Error fetching data from {url}: {e}")
         return None
 
+
 def parse_groups_data(html_content):
-
+   
     """Parse the HTML content to extract group data."""
-
+    
     soup = BeautifulSoup(html_content, 'html.parser')
     table = soup.find('table', {'class': 'table-alternate'})
     if not table:
@@ -49,40 +51,34 @@ def parse_groups_data(html_content):
     return groups_data
 
 
-def save_to_json(groups_data, filepath='data/groups_info/data.json'):
+def save_to_json(groups_data, filepath):
 
-    """Save the extracted groups data to a JSON file."""
+    """Save the extracted group data to a JSON file."""
 
+    #Checks if DIR exists, if no, creates
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
-    
+
+    #Saves data to JSON
     with open(filepath, 'w') as json_file:
         json.dump(groups_data, json_file, indent=4)
-    print(f"Data saved to [{filepath}].")
+    print(f"Data saved to {filepath}")
+
 
 def main():
-    # Argument Parser
-    parser = argparse.ArgumentParser(description='Scrape MITRE ATT&CK group data and save it to a JSON file.')
-    parser.add_argument(
-        '--url',
-        type=str,
-        default='https://attack.mitre.org/groups/',
-        help='URL of the MITRE ATT&CK groups page to scrape.'
-    )
-    parser.add_argument(
-        '--output',
-        type=str,
-        default='data/groups_info/data.json',
-        help='Output file path to save the scraped data.'
-    )
+    # Set up the argument parser
+    parser = argparse.ArgumentParser(description='Scrape MITRE ATT&CK group data and save it to JSON.')
+    parser.add_argument('--output', type=str, default='data/groups_info/data.json', help='Output file path to save the scraped data.')
 
-    #Parse the arguments
+    #Parse ARGs
     args = parser.parse_args()
 
-    #Fetch and parse the data
-    html_content = fetch_groups_data(args.url)
+    #Data Scraping 
+    url = 'https://attack.mitre.org/groups/'
+    html_content = fetch_groups_data(url)
     if html_content:
         groups_data = parse_groups_data(html_content)
         save_to_json(groups_data, args.output)
+
 
 if __name__ == '__main__':
     main()
