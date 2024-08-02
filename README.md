@@ -129,7 +129,7 @@ The data is stored in JSON format, with each group having the following structur
 
 ## Contributing
 
-Contributions are welcome! Please read our [Developer Guide](docs\DEVELOPER_GUIDE.md) for details on our code of conduct and the process for submitting pull requests.
+Contributions are welcome! Please read our [Developer Guide](docs/DEVELOPER_GUIDE.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## License
 
