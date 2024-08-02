@@ -108,7 +108,7 @@ Detailed documentation can be found in the `docs` directory:
 
 - [Installation Guide](docs/INSTALLATION_GUIDE.md)
 - [User Guide](docs/USER_GUIDE.md)
-- [Developer Guide](docs/DEVELOPERS_GUIDE.md)
+- [Developer Guide](docs/DEVELOPER_GUIDE.md)
 - [Release Notes](docs/RELEASE_NOTES.md)
 - [Contributing](docs/CONTRIBUTING.md)
 - [Code of Conduct](docs/CODE_OF_CONDUCT.MD)
@@ -128,11 +128,11 @@ The data is stored in JSON format, with each group having the following structur
 
 ## Contributing
 
-Contributions are welcome! Please read our [Developer Guide](docs/DEVELOPERS_GUIDE.md) for details on our code of conduct and the process for submitting pull requests.
+Contributions are welcome! Please read our [Developer Guide](docs/DDEVELOPER_GUIDE.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENCE.md) file for details.
 
 ## Acknowledgments
 
